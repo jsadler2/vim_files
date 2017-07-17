@@ -33,3 +33,6 @@ let g:tex_flavor='latex'
 "let Tex_FoldedMisc=""
 
 set guifont=Consolas:h11:cANSI
+
+inoremap jk <ESC>
+let mapleader = "\<Space>"
