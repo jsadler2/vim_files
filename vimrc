@@ -36,3 +36,4 @@ set guifont=Consolas:h11:cANSI
 
 inoremap jk <ESC>
 let mapleader = "\<Space>"
+
