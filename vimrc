@@ -4,8 +4,8 @@
 execute pathogen#infect()
 
 syntax enable
-set background=dark
-colorscheme solarized
+"set background=dark
+"colorscheme solarized
 
 
 "VIM-LATEX STUFF"
@@ -36,4 +36,9 @@ set guifont=Consolas:h11:cANSI
 
 inoremap jk <ESC>
 let mapleader = "\<Space>"
+
+hi clear SpellBad
+hi clear SpellCap
+hi SpellBad cterm=underline
+hi SpellCap cterm=underline
 
