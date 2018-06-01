@@ -39,6 +39,27 @@ let mapleader = "\<Space>"
 
 hi clear SpellBad
 hi clear SpellCap
-hi SpellBad cterm=underline
-hi SpellCap cterm=underline
+hi clear SpellLocal
+hi clear SpellRare	
 
+hi SpellBad cterm=underline
+hi SpellLocal cterm=underline
+hi SpellCap cterm=underline
+hi SpellRare cterm=underline
+
+function! WordProcessor()
+  "movement changes
+  map j gj
+  map k gk
+  " formatting text
+  setlocal formatoptions=1
+  setlocal noexpandtab
+  setlocal wrap
+  setlocal linebreak
+  " spelling and thesaurus
+  setlocal spell spelllang=en_us
+  "set thesaurus+=/home/jeff/.vim/thesaurus/mthesaur.txt
+   "complete+=s makes autocompletion search the thesaurus
+  "set complete+=s
+endfunction
+com! WP call WordProcessor()
