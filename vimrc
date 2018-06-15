@@ -63,3 +63,18 @@ function! WordProcessor()
   "set complete+=s
 endfunction
 com! WP call WordProcessor()
+
+set splitright
+
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+
+function! SynCheck()
+    :SyntasticCheck<CR>
+endfunction
+
+function! SynTog()
+    :SyntasticToggleMode<CR>
+endfunction
+
+com! Syn call SynCheck()
+com! SynT call SynTog()
