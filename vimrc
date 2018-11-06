@@ -4,8 +4,8 @@
 execute pathogen#infect()
 
 syntax enable
-"set background=dark
-"colorscheme solarized
+set background=dark
+colorscheme solarized
 
 
 "VIM-LATEX STUFF"
@@ -48,9 +48,6 @@ hi SpellCap cterm=underline
 hi SpellRare cterm=underline
 
 function! WordProcessor()
-  "movement changes
-  map j gj
-  map k gk
   " formatting text
   setlocal formatoptions=1
   setlocal noexpandtab
@@ -68,13 +65,3 @@ set splitright
 
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 
-function! SynCheck()
-    :SyntasticCheck<CR>
-endfunction
-
-function! SynTog()
-    :SyntasticToggleMode<CR>
-endfunction
-
-com! Syn call SynCheck()
-com! SynT call SynTog()
