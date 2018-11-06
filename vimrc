@@ -54,7 +54,7 @@ function! WordProcessor()
   setlocal wrap
   setlocal linebreak
   " spelling and thesaurus
-  setlocal spell spelllang=en_us
+  "setlocal spell spelllang=en_us
   "set thesaurus+=/home/jeff/.vim/thesaurus/mthesaur.txt
    "complete+=s makes autocompletion search the thesaurus
   "set complete+=s
