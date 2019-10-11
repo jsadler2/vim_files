@@ -5,7 +5,7 @@ execute pathogen#infect()
 
 syntax enable
 set background=dark
-colorscheme solarized
+"colorscheme solarized
 
 
 "VIM-LATEX STUFF"
@@ -78,3 +78,6 @@ set expandtab
 
 nnoremap H gT
 nnoremap L gt
+
+au BufNewFile,BufRead Snakefile set syntax=snakemake
+au BufNewFile,BufRead *.smk set syntax=snakemake
