@@ -1,5 +1,6 @@
 :set number
 :set spell
+:set hlsearch
 
 execute pathogen#infect()
 
@@ -79,5 +80,17 @@ set expandtab
 nnoremap H gT
 nnoremap L gt
 
+set diffopt+=vertical
+
 au BufNewFile,BufRead Snakefile set syntax=snakemake
 au BufNewFile,BufRead *.smk set syntax=snakemake
+
+" Fugitive Mappings
+nnoremap gs :Git<CR>
+nnoremap gd :Gdiff<CR>
+nnoremap gw :Gwrite<CR>
+nnoremap gc :Git commit<CR>
+nnoremap gp :Git push<CR>
+
+
+
