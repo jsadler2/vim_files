@@ -1,4 +1,6 @@
 :set number
+:set relativenumber
+:set scrolloff=10
 :set spell
 :set hlsearch
 
@@ -57,7 +59,7 @@ function! WordProcessor()
   setlocal noexpandtab
   setlocal wrap
   setlocal linebreak
-  setlocal nonumber
+  "setlocal nonumber
   " spelling and thesaurus
   "setlocal spell spelllang=en_us
   "set thesaurus+=/home/jeff/.vim/thesaurus/mthesaur.txt
@@ -93,4 +95,30 @@ nnoremap gc :Git commit<CR>
 nnoremap gp :Git push<CR>
 
 
+au VimLeave * :!clear
 
+set visualbell t_vb=    " turn off error beep/flash
+set novisualbell        " turn off visual bell
+set noerrorbells visualbell t_vb=
+
+
+call plug#begin()
+
+" List your plugins here
+Plug 'tpope/vim-sensible'
+Plug 'preservim/nerdcommenter'
+Plug 'preservim/nerdtree'
+Plug 'psf/black', { 'branch': 'stable' }
+Plug 'easymotion/vim-easymotion'
+Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+call plug#end()
+
+let g:fzf_action = { 'enter': 'tab split' }
+
+set gfn=Monaco:h14
